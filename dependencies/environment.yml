@@ -1,4 +1,4 @@
-name: project-voxar
+name: image_classify
 channels:
   - defaults
   - conda-forge

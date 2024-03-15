@@ -1,4 +1,4 @@
-# project_voxar
+# image_classifier
 
 ## Description about the program
 This program reads images into a folder and using covolutional network (resnet50) the program classifies it if it is an animal and saves the classification into a csv

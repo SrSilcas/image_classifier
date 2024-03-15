@@ -10,5 +10,7 @@ dependencies:
   - IPython==8.15.0
   - pip:
       - tk==0.1.0
-  
+      - Pillow
+      - torch
+      - torchvision
 prefix: C:\Users\lsac\.conda\envs\project-voxar

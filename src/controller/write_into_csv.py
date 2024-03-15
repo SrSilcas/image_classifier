@@ -1,13 +1,14 @@
 import csv
 
-class WriteIntoCsv():
+
+class WriteIntoCsv:
     def __init__(self) -> None:
         """
         This method initialize WriteIntoCsv object
         """
         self.csv_name = None
 
-    def __check_csv_creat(self) -> None:
+    def __check_csv_create(self) -> None:
         """
         This method identifies if csv is already created
         """
@@ -16,28 +17,23 @@ class WriteIntoCsv():
             file_csv = open(self.csv_name)
             file_csv.close()
         except FileNotFoundError as e:
-            # If excepition raise create a csv file with the write name
+            # If exception raise create a csv file with the write name
             with open(self.csv_name, 'a+', newline="") as csv_file:
                 writer = csv.writer(csv_file)
-                writer.writerow(('Image name','Identification'))
+                writer.writerow(('Image name', 'Identification'))
     
-    def writer(self, informations:tuple, folder_name:str) -> None:
+    def writer(self, information: tuple, folder_name: str) -> None:
         """
-        This method write informations into csv about images
+        This method write information into csv about images
 
         Args:
-            informations (tuple): informations about image name and classification
+            information (tuple): information about image name and classification
             folder_name (str): name of folder to put into csv name
         """
         self.csv_name = folder_name + '.csv'
-        self.__check_csv_creat()
+        self.__check_csv_create()
 
         with open(self.csv_name, 'a+', newline='') as csv_file:
             writer = csv.writer(csv_file)
-            writer.writerow(informations)
+            writer.writerow(information)
     
-
-if __name__ == '__main__':
-    writer = WriteIntoCsv()
-    writer.writer(('download (1).jpg', 'Macaque'), 'cade')
-    print('acabei')

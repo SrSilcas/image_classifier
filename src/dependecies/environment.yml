@@ -1,0 +1,14 @@
+name: project-voxar
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.9.17
+  - pip==23.2.1
+  - requests==2.31.0
+  - IPython==8.15.0
+  - pip:
+      - tk==0.1.0
+  
+prefix: C:\Users\lsac\.conda\envs\project-voxar

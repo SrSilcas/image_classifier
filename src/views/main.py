@@ -7,7 +7,7 @@ class MainWindow():
         This method to instantiate a object MainWindow
 
         Args:
-            master (tk.Tk): _description_
+            master (tk.Tk): The main window
         """
         self.window = master
 
